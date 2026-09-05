@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ahnaf Hasan — Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script>document.documentElement.classList.add('js');</script>
+
+    <div class="transition-overlay" id="transitionOverlay" aria-hidden="true">
+        <p class="transition-overlay__text"><span id="transitionCommand"></span><span
+                class="transition-overlay__cursor">_</span></p>
+    </div>
+
+    <div class="layout">
+
+        <!-- Icon Sidebar -->
+        <aside class="rail" id="rail">
+            <a href="#home" class="rail__brand" aria-label="Home">AH</a>
+
+            <nav class="rail__nav" aria-label="Primary">
+                <a href="#home" class="rail__link is-active" data-label="Home">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                        <path d="M3 11.5 12 4l9 7.5M5.5 10v9a1 1 0 0 0 1 1H10v-6h4v6h3.5a1 1 0 0 0 1-1v-9" />
+                    </svg>
+                </a>
+                <a href="#about" class="rail__link" data-label="About">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                        <circle cx="12" cy="8" r="3.4" />
+                        <path d="M5 20c1.2-4 4-6 7-6s5.8 2 7 6" />
+                    </svg>
+                </a>
+                <a href="#projects" class="rail__link" data-label="Projects">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                        <rect x="3.5" y="3.5" width="7" height="7" rx="1.3" />
+                        <rect x="13.5" y="3.5" width="7" height="7" rx="1.3" />
+                        <rect x="3.5" y="13.5" width="7" height="7" rx="1.3" />
+                        <rect x="13.5" y="13.5" width="7" height="7" rx="1.3" />
+                    </svg>
+                </a>
+                <a href="#contact" class="rail__link" data-label="Contact">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                        <rect x="3.5" y="5.5" width="17" height="13" rx="2" />
+                        <path d="m4.5 7 7.5 6 7.5-6" />
+                    </svg>
+                </a>
+            </nav>
+
+            <div class="rail__social">
+                <a href="https://github.com/Tragiic1x" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+                    data-label="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" />
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/ahnaf-hasan-797118281" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn" data-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3.75a1.96 1.96 0 1 0 0 3.92 1.96 1.96 0 0 0 0-3.92ZM20.44 20h-3.38v-5.9c0-1.4-.03-3.2-1.95-3.2-1.96 0-2.26 1.53-2.26 3.1V20H9.47V8.5h3.24v1.57h.05c.45-.86 1.56-1.77 3.22-1.77 3.44 0 4.46 2.27 4.46 5.21V20Z" />
+                    </svg>
+                </a>
+            </div>
+        </aside>
+
+        <button class="mobile-menu" id="mobileMenu" aria-expanded="false" aria-label="Open menu">
+            <span class="mobile-menu__line"></span>
+            <span class="mobile-menu__line"></span>
+            <span class="mobile-menu__line"></span>
+        </button>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Hero -->
+            <section id="home" class="hero">
+                <div class="hero__content">
+                    <p class="hero__tag">second-year · university of toronto · cs</p>
+                    <h1 class="hero__title">
+                        Hi, I'm Ahnaf.<br>I build things that work —<br>then I take them apart to see why.
+                    </h1>
+                    <p class="hero__subtitle">
+                        Computer Science student focused on backend systems, AI-integrated tools,
+                        and low-level programming. Currently building my way through a handful of
+                        self-directed projects, one deployed bug fix at a time.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="#contact" class="btn btn--primary">Get in touch</a>
+                        <a href="#projects" class="btn btn--ghost">See my work</a>
+                    </div>
+                </div>
+
+                <div class="hero__visual" aria-hidden="true">
+                    <svg viewBox="0 0 420 420" class="network">
+                        <g class="network__lines" stroke="#0466c8" stroke-width="1" opacity="0.55">
+                            <line x1="80" y1="90" x2="220" y2="60" />
+                            <line x1="220" y1="60" x2="340" y2="130" />
+                            <line x1="80" y1="90" x2="150" y2="210" />
+                            <line x1="150" y1="210" x2="220" y2="60" />
+                            <line x1="150" y1="210" x2="90" y2="320" />
+                            <line x1="150" y1="210" x2="270" y2="260" />
+                            <line x1="270" y1="260" x2="340" y2="130" />
+                            <line x1="270" y1="260" x2="330" y2="350" />
+                            <line x1="90" y1="320" x2="230" y2="370" />
+                            <line x1="230" y1="370" x2="330" y2="350" />
+                        </g>
+                        <g class="network__nodes" fill="#0466c8">
+                            <circle cx="80" cy="90" r="6" />
+                            <circle cx="220" cy="60" r="9" />
+                            <circle cx="340" cy="130" r="6" />
+                            <circle cx="150" cy="210" r="11" />
+                            <circle cx="270" cy="260" r="7" />
+                            <circle cx="90" cy="320" r="6" />
+                            <circle cx="230" cy="370" r="8" />
+                            <circle cx="330" cy="350" r="6" />
+                        </g>
+                    </svg>
+                </div>
+            </section>
+
+            <!-- About -->
+            <section id="about" class="section about">
+                <div class="about__grid">
+                    <div class="about__text reveal">
+                        <p class="section-label">About</p>
+                        <h2 class="section-title">A bit about me</h2>
+                        <p class="about__body">
+                            I'm a second-year Computer Science student at the University of Toronto.
+                            I like projects that force me to actually understand what's happening
+                            underneath — whether that's debugging a segfault in a shell I wrote from
+                            scratch, or figuring out why a token budget kept wiping conversation
+                            history. I learn fastest by building, breaking, and fixing things myself.
+                        </p>
+                    </div>
+
+                    <div class="about__skills reveal">
+                        <p class="section-label">Languages &amp; tools</p>
+                        <ul class="skill-list">
+                            <li class="skill">
+                                <div class="skill__row">
+                                    <span>Java</span><span class="skill__years">2 yrs</span>
+                                </div>
+                                <div class="skill__track">
+                                    <div class="skill__fill" style="width: 50%;"></div>
+                                </div>
+                            </li>
+                            <li class="skill">
+                                <div class="skill__row">
+                                    <span>Python</span><span class="skill__years">2 yrs</span>
+                                </div>
+                                <div class="skill__track">
+                                    <div class="skill__fill" style="width: 50%;"></div>
+                                </div>
+                            </li>
+                            <li class="skill">
+                                <div class="skill__row">
+                                    <span>C</span><span class="skill__years">1.5 yrs</span>
+                                </div>
+                                <div class="skill__track">
+                                    <div class="skill__fill" style="width: 37%;"></div>
+                                </div>
+                            </li>
+                            <li class="skill">
+                                <div class="skill__row">
+                                    <span>HTML / CSS / JS</span><span class="skill__years">&lt;1 yr</span>
+                                </div>
+                                <div class="skill__track">
+                                    <div class="skill__fill" style="width: 18%;"></div>
+                                </div>
+                            </li>
+                            <li class="skill">
+                                <div class="skill__row">
+                                    <span>SQL</span><span class="skill__years">1 yr</span>
+                                </div>
+                                <div class="skill__track">
+                                    <div class="skill__fill" style="width: 25%;"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section id="projects" class="section projects">
+                <div class="reveal">
+                    <p class="section-label">Projects</p>
+                    <h2 class="section-title">Things I've built</h2>
+                </div>
+
+                <div class="project-grid">
+                    <article class="project-card reveal">
+                        <div class="project-card__dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                        <h3>AI Study Buddy</h3>
+                        <p>Reads uploaded lecture notes and generates quiz questions or answers,
+                            grounded strictly in the uploaded content.</p>
+                        <div class="project-card__tags">
+                            <span>Python</span><span>Groq API</span><span>Streamlit</span>
+                        </div>
+                        <a href="https://github.com/Tragiic1x/AI-Teaching-Assistant" target="_blank"
+                            rel="noopener noreferrer" class="project-card__link">View project →</a>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-card__dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                        <h3>MiniShell</h3>
+                        <p>A Unix-like command-line shell built in C from scratch — process
+                            execution, command history, signal handling, and I/O redirection.</p>
+                        <div class="project-card__tags">
+                            <span>C</span><span>Systems programming</span>
+                        </div>
+                        <a href="https://github.com/Tragiic1x/MiniShell" target="_blank" rel="noopener noreferrer"
+                            class="project-card__link">View project →</a>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-card__dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                        <h3>Audio Transcribe</h3>
+                        <p>A full-stack app that transcribes uploaded audio into text — Spring Boot
+                            backend calling Whisper via Groq's API, React frontend for uploading files
+                            and displaying results.</p>
+                        <div class="project-card__tags">
+                            <span>Java</span><span>Spring Boot</span><span>React</span><span>Groq API</span>
+                        </div>
+                        <div class="project-card__links">
+                            <a href="https://github.com/Tragiic1x/Audio-Transcribe-Frontend" target="_blank"
+                                rel="noopener noreferrer" class="project-card__link">Frontend →</a>
+                            <a href="https://github.com/Tragiic1x/Audio-Transcribe-Backend" target="_blank"
+                                rel="noopener noreferrer" class="project-card__link">Backend →</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card project-card--empty reveal">
+                        <h3>Next project</h3>
+                        <p>Reserved for whatever you build next.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact" class="section contact">
+                <div class="contact__wrap">
+                    <div class="contact__info">
+                        <p class="section-label">Contact</p>
+                        <h2 class="section-title">Let's talk</h2>
+                        <p class="contact__intro">
+                            Open to internships, collaboration, or just a conversation about
+                            something you saw here. Reach out however's easiest.
+                        </p>
+                        <a href="mailto:ahnaf.ahsn@gmail.com" class="contact__email">ahnaf.ahsn@gmail.com</a>
+
+                        <div class="contact__links">
+                            <a href="https://github.com/Tragiic1x" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a href="https://www.linkedin.com/in/ahnaf-hasan-797118281" target="_blank"
+                                rel="noopener noreferrer">LinkedIn</a>
+                        </div>
+                    </div>
+
+                    <form id="contactForm" class="contact-form">
+                        <label class="field">
+                            <input type="text" name="from_name" placeholder=" " required>
+                            <span>Name</span>
+                        </label>
+                        <label class="field">
+                            <input type="email" name="reply_to" placeholder=" " required>
+                            <span>Email</span>
+                        </label>
+                        <label class="field">
+                            <textarea name="message" placeholder=" " required></textarea>
+                            <span>Message</span>
+                        </label>
+                        <button type="submit" class="btn btn--primary btn--block">
+                            <span class="btn__label">Send message</span>
+                            <span class="form-loader" aria-hidden="true"></span>
+                        </button>
+                        <p id="formStatus" class="form-status" role="status"></p>
+                    </form>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p>© 2026 Ahnaf Hasan.</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
